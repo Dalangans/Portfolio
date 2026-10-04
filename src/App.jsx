@@ -113,6 +113,7 @@ const projects = [
     title: 'Paradise Nursery - Online Plant Shop',
     tag: 'Individual',
     github: 'https://github.com/Dalangans/e-plantShopping',
+    liveUrl: 'https://paradise-nursery-sigma-seven.vercel.app/plant',
     images: ['paradise-nursery-1.jpg', 'paradise-nursery-2.jpg', 'paradise-nursery-3.jpg'],
     quote: 'Build with purpose, learn with curiosity, and leave every project better than you found it.',
     description: 'Responsive plant e-commerce site with category browsing, product details, and a dynamic shopping cart.',
@@ -547,10 +548,18 @@ function App() {
                       <h3>{project.title}</h3>
                       <span className="tag">{project.tag}</span>
                     </div>
-                    <a className="project-github" href={project.github} target="_blank" rel="noreferrer">
-                      <i className="fa-brands fa-github" /> View on GitHub
-                      <i className="fa-solid fa-arrow-up-right-from-square" />
-                    </a>
+                    <div className="project-links">
+                      <a className="project-github" href={project.github} target="_blank" rel="noreferrer">
+                        <i className="fa-brands fa-github" /> View on GitHub
+                        <i className="fa-solid fa-arrow-up-right-from-square" />
+                      </a>
+                      {project.liveUrl && (
+                        <a className="project-live" href={project.liveUrl} target="_blank" rel="noreferrer">
+                          <i className="fa-solid fa-globe" /> Live Website
+                          <i className="fa-solid fa-arrow-up-right-from-square" />
+                        </a>
+                      )}
+                    </div>
                     {project.quote && <p className="project-quote">&ldquo;{project.quote}&rdquo;</p>}
                     <p className="project-description">{project.description}</p>
                     <div className="project-technologies" aria-label={`${project.title} technologies`}>

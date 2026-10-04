@@ -893,6 +893,28 @@ ul {
     transition: background 200ms ease, color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.project-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: var(--amber-soft);
+    border: 1px solid rgba(221, 158, 43, 0.22);
+    color: var(--amber);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 200ms ease, color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
 .project-github:hover {
     background: var(--grad);
     color: #fff;
@@ -901,12 +923,29 @@ ul {
     border-color: transparent;
 }
 
+.project-live:hover {
+    background: var(--amber);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(221, 158, 43, 0.24);
+    border-color: transparent;
+}
+
 .project-github i:last-child {
     font-size: 0.7rem;
     transition: transform 200ms ease;
 }
 
+.project-live i:last-child {
+    font-size: 0.7rem;
+    transition: transform 200ms ease;
+}
+
 .project-github:hover i:last-child {
+    transform: translate(2px, -2px);
+}
+
+.project-live:hover i:last-child {
     transform: translate(2px, -2px);
 }
 
