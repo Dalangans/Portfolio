@@ -64,10 +64,11 @@ const projects = [
     tag: 'Individual',
     github: 'https://github.com/Dalangans/wizlynn-ai-assessment-platform',
     images: ['wizlynn-1.jpg', 'wizlynn-2.jpg', 'wizlynn-3.jpg'],
-    points: [
-      'Engineered a full-stack AI-powered assessment platform using FastAPI and SQLite, reducing manual evaluation time from 3 hours to under 2 minutes per assessment.',
-      'Implemented an Agentic AI workflow integrating Anthropic API for knowledge extraction, question generation, and automated scoring.',
-      'Developed dual-view architecture with human-in-the-loop validation, achieving a 95% accuracy rate.',
+    description: 'AI assessment platform that turns business material into reviewed questions, scored exams, and learning suggestions.',
+    technologies: [
+      ['Python', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
+      ['FastAPI', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg'],
+      ['SQLite', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg'],
     ],
   },
   {
@@ -75,10 +76,11 @@ const projects = [
     tag: 'Individual',
     github: 'https://github.com/Dalangans/BillyShopAI',
     images: ['billyshopai-1.jpg', 'billyshopai-2.jpg', 'billyshopai-3.jpg'],
-    points: [
-      'Developed a scalable conversational AI interface using Django and OpenAI API with sub-2-second latency.',
-      'Implemented secure configuration management utilizing python-dotenv for API credential protection.',
-      'Optimized backend routing and reduced API overhead by 20%.',
+    description: 'Conversational AI chatbot built for natural, fast, and secure customer interactions.',
+    technologies: [
+      ['Python', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
+      ['Django', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg'],
+      ['OpenAI API', 'https://cdn.simpleicons.org/openai/412991'],
     ],
   },
   {
@@ -86,10 +88,11 @@ const projects = [
     tag: 'Team',
     github: 'https://github.com/Dalangans/CNN-PlantDisease',
     images: ['plant-disease-1.jpg', 'plant-disease-2.jpg', 'plant-disease-3.jpg'],
-    points: [
-      'Developed an image classification system using TensorFlow/Keras detecting tomato leaf diseases with 92.24% validation accuracy (MobileNetV2).',
-      'Engineered robust model pipeline with advanced data augmentation and hyperparameter fine-tuning.',
-      'Analyzed performance using Confusion Matrix, F1-Score, and Precision/Recall metrics.',
+    description: 'Computer vision model that identifies five tomato leaf conditions with 92.24% validation accuracy.',
+    technologies: [
+      ['Python', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
+      ['TensorFlow', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg'],
+      ['Keras', 'https://cdn.simpleicons.org/keras/D00000'],
     ],
   },
   {
@@ -97,10 +100,12 @@ const projects = [
     tag: 'Team',
     github: 'https://github.com/Dalangans/SIK-GO',
     images: ['sik-go-1.jpg', 'sik-go-2.jpg', 'sik-go-3.jpg'],
-    points: [
-      'Developed full-stack room-booking and document management platform using React and Node.js for 2+ student organizations.',
-      'Engineered document analysis engine integrating Google Gemini API for proposal evaluation and plagiarism detection (100+ docs).',
-      'Implemented JWT authentication managing room reservation lifecycles for 200+ users.',
+    description: 'Full-stack room reservation and proposal management system with AI-assisted document review.',
+    technologies: [
+      ['React', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'],
+      ['Node.js', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'],
+      ['MongoDB', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg'],
+      ['Gemini API', 'https://cdn.simpleicons.org/googlegemini/8E75B2'],
     ],
   },
   {
@@ -109,10 +114,11 @@ const projects = [
     github: 'https://github.com/Dalangans/e-plantShopping',
     images: ['paradise-nursery-1.jpg', 'paradise-nursery-2.jpg', 'paradise-nursery-3.jpg'],
     quote: 'Build with purpose, learn with curiosity, and leave every project better than you found it.',
-    points: [
-      'Built a responsive e-commerce web application for browsing and purchasing houseplants across Indoor, Outdoor, and Succulent categories.',
-      'Implemented dynamic shopping cart management with quantity adjustment, item deletion, and centralized Redux state management.',
-      'Created a smooth, user-friendly shopping experience with React, React Router DOM, Redux Toolkit, and responsive CSS3.',
+    description: 'Responsive plant e-commerce site with category browsing, product details, and a dynamic shopping cart.',
+    technologies: [
+      ['React', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'],
+      ['Redux', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg'],
+      ['JavaScript', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'],
     ],
   },
 ];
@@ -545,9 +551,15 @@ function App() {
                       <i className="fa-solid fa-arrow-up-right-from-square" />
                     </a>
                     {project.quote && <p className="project-quote">&ldquo;{project.quote}&rdquo;</p>}
-                    <ul>
-                      {project.points.map((point) => <li key={point}>{point}</li>)}
-                    </ul>
+                    <p className="project-description">{project.description}</p>
+                    <div className="project-technologies" aria-label={`${project.title} technologies`}>
+                      {project.technologies.map(([name, icon]) => (
+                        <span className="technology-badge" key={name}>
+                          <img src={icon} alt="" aria-hidden="true" />
+                          {name}
+                        </span>
+                      ))}
+                    </div>
                   </article>
                 );
               })}
