@@ -80,7 +80,7 @@ const projects = [
     technologies: [
       ['Python', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
       ['Django', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg'],
-      ['OpenAI API', 'https://cdn.simpleicons.org/openai/412991'],
+      ['OpenAI API', 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg'],
     ],
   },
   {
