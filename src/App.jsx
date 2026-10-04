@@ -69,6 +69,7 @@ const projects = [
       ['Python', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
       ['FastAPI', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg'],
       ['SQLite', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg'],
+      ['Anthropic API', 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/anthropic.svg'],
     ],
   },
   {
