@@ -130,30 +130,45 @@ const flatImages = projects.flatMap((project) =>
 );
 
 function ProjectGallery({ project, startIndex, onOpen }) {
-  const galleryImages = [...project.images, ...project.images];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeImage = project.images[activeIndex];
+  const navigate = (direction) => {
+    setActiveIndex((currentIndex) => (
+      (currentIndex + direction + project.images.length) % project.images.length
+    ));
+  };
 
   return (
     <div className="project-gallery" aria-label={`${project.title} project previews`}>
       <div className="project-gallery-track">
-        {galleryImages.map((image, index) => {
-          const imageIndex = index % project.images.length;
-          return (
-            <button
-              type="button"
-              className="project-preview"
-              key={`${image}-${index}`}
-              onClick={() => onOpen(startIndex + imageIndex)}
-            >
-              <img
-                src={getImageUrl(image)}
-                alt={`${project.title} preview ${imageIndex + 1}`}
-                onError={(event) => event.currentTarget.classList.add('is-missing')}
-              />
-              <span className="preview-zoom-icon"><i className="fa-solid fa-expand" /></span>
-            </button>
-          );
-        })}
+        <button
+          type="button"
+          className="project-preview"
+          onClick={() => onOpen(startIndex + activeIndex)}
+        >
+          <img
+            src={getImageUrl(activeImage)}
+            alt={`${project.title} preview ${activeIndex + 1}`}
+            onError={(event) => event.currentTarget.classList.add('is-missing')}
+          />
+        </button>
       </div>
+      <button
+        type="button"
+        className="project-gallery-nav project-gallery-prev"
+        onClick={() => navigate(-1)}
+        aria-label={`Previous ${project.title} image`}
+      >
+        <i className="fa-solid fa-chevron-left" />
+      </button>
+      <button
+        type="button"
+        className="project-gallery-nav project-gallery-next"
+        onClick={() => navigate(1)}
+        aria-label={`Next ${project.title} image`}
+      >
+        <i className="fa-solid fa-chevron-right" />
+      </button>
     </div>
   );
 }
