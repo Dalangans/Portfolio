@@ -654,7 +654,15 @@ function App() {
                   {certifications.map((cert) => (
                     <li key={cert.label}>
                       <i className="fa-solid fa-award" />
-                      <a href={cert.href} target="_blank" rel="noreferrer">{cert.label}</a>
+                      <a
+                        className="certificate-link"
+                        href={cert.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open certificate: ${cert.label}`}
+                      >
+                        {cert.label}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -666,9 +674,11 @@ function App() {
                   <div>
                     <h4>
                       <a
+                        className="certificate-link"
                         href="https://drive.google.com/file/d/1H-RtOIJx3Ps6v56726bxUFrSXgBVnASx/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
+                        aria-label="Open TekTukBum certificate"
                       >
                         Achievement Appreciation (Coral Reef Guardian)
                       </a>
