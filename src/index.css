@@ -389,14 +389,26 @@ ul {
     color: rgba(255, 255, 255, 0.55);
 }
 
-.contact-info span {
+.contact-info span,
+.contact-info a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
 .contact-info i {
     color: var(--amber);
+}
+
+.contact-info a:hover,
+.contact-info a:focus-visible {
+    color: #fff;
 }
 
 .hero-buttons {

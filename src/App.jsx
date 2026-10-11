@@ -460,12 +460,20 @@ function App() {
               <div className="contact-info">
                 <span><i className="fa-solid fa-location-dot" /> South Jakarta, Indonesia</span>
                 <span><i className="fa-solid fa-envelope" /> nabielutomo@gmail.com</span>
+                <a href="https://www.instagram.com/nabiel_harits/" target="_blank" rel="noreferrer">
+                  <i className="fa-brands fa-instagram" /> @nabiel_harits
+                </a>
               </div>
 
               <div className="hero-buttons">
-                <a href="https://www.instagram.com/nabiel_harits/" target="_blank" rel="noreferrer" className="btn btn-primary">
-                  <i className="fa-brands fa-instagram" /> Get in touch
-                </a>
+               <a
+                 href="https://mail.google.com/mail/?view=cm&fs=1&to=nabielutomo%40gmail.com&su=Portfolio%20inquiry&body=Hey%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20work%20and%20discuss%20a%20potential%20opportunity.%0A%0ABest%20regards%2C"
+                 target="_blank"
+                 rel="noreferrer"
+                 className="btn btn-primary"
+               >
+                 <i className="fa-solid fa-paper-plane" /> Get in touch
+               </a>
                 <a href="https://github.com/Dalangans" target="_blank" rel="noreferrer" className="btn btn-secondary">
                   <i className="fa-brands fa-github" /> GitHub
                 </a>
