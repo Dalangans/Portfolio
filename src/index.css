@@ -429,8 +429,10 @@ ul {
 
 .btn-primary {
     color: #fff;
-    background: var(--grad);
+    background: linear-gradient(120deg, var(--indigo) 0%, var(--amber) 100%);
+    border-color: rgba(255, 255, 255, 0.12);
     box-shadow: 0 16px 34px rgba(82, 79, 213, 0.35);
+    overflow: visible;
 }
 
 .btn-secondary {

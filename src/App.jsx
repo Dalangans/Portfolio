@@ -463,8 +463,8 @@ function App() {
               </div>
 
               <div className="hero-buttons">
-                <a href="mailto:nabielutomo@gmail.com" className="btn btn-primary">
-                  <i className="fa-solid fa-paper-plane" /> Get in touch
+                <a href="https://www.instagram.com/nabiel_harits/" target="_blank" rel="noreferrer" className="btn btn-primary">
+                  <i className="fa-brands fa-instagram" /> Get in touch
                 </a>
                 <a href="https://github.com/Dalangans" target="_blank" rel="noreferrer" className="btn btn-secondary">
                   <i className="fa-brands fa-github" /> GitHub
