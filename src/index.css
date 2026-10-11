@@ -442,7 +442,7 @@ ul {
 .btn-primary {
     color: #fff;
     background: linear-gradient(120deg, var(--indigo) 0%, var(--amber) 100%);
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(147, 147, 147, 0.8);
     box-shadow: 0 16px 34px rgba(82, 79, 213, 0.35);
     overflow: visible;
 }
@@ -1238,9 +1238,9 @@ ul {
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    color: #fff;
-    border: 1px solid var(--ink-border);
-    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
     transition: transform 200ms ease, background 200ms ease;
 }
 
