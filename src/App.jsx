@@ -258,11 +258,26 @@ const leadership = [
 ];
 
 const certifications = [
-  'Red Hat OpenStack Administration I (CL110) – Red Hat, Apr 2026',
-  'Data Cleaning – Kaggle, Feb 2026',
-  'IBM Full Stack Software Developer Certificate – IBM, Feb 2026',
-  'Ethical Hacker – Cisco Networking Academy, Feb 2026',
-  'CCNA: Introduction to Networks – Cisco, Jan 2025',
+  {
+    label: 'Red Hat OpenStack Administration I (CL110) – Red Hat, Apr 2026',
+    href: 'https://drive.google.com/file/d/1xH1m2Bx42lPNwyu9m-Av9mIyhReWUIEV/view?usp=sharing',
+  },
+  {
+    label: 'Data Cleaning – Kaggle, Feb 2026',
+    href: 'https://drive.google.com/file/d/1wghPknhi5Vu0BPvrUTeqyzN2UW2rVnKX/view?usp=drive_link',
+  },
+  {
+    label: 'IBM Full Stack Software Developer Certificate – IBM, Feb 2026',
+    href: 'https://drive.google.com/file/d/1km3AQAEpet6GAVF6LplY2IYU-GI6xMNn/view?usp=drive_link',
+  },
+  {
+    label: 'Ethical Hacker – Cisco Networking Academy, Feb 2026',
+    href: 'https://drive.google.com/file/d/1Yofo_8g1aHGd8Xk2rzcnA-AHGxq_-IF0/view?usp=drive_link',
+  },
+  {
+    label: 'CCNA: Introduction to Networks – Cisco, Jan 2025',
+    href: 'https://drive.google.com/file/d/1A_vLFWsjfVCJaT50x_uuWWucmj9TQOY-/view?usp=drive_link',
+  },
 ];
 
 function useReveal() {
@@ -637,7 +652,10 @@ function App() {
                 <div className="section-subheading"><h3>Certifications</h3></div>
                 <ul className="cert-list">
                   {certifications.map((cert) => (
-                    <li key={cert}><i className="fa-solid fa-award" /> {cert}</li>
+                    <li key={cert.label}>
+                      <i className="fa-solid fa-award" />
+                      <a href={cert.href} target="_blank" rel="noreferrer">{cert.label}</a>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -646,7 +664,15 @@ function App() {
                 <article className="glass-card award-card">
                   <div className="award-icon"><i className="fa-solid fa-trophy" /></div>
                   <div>
-                    <h4>Achievement Appreciation (Coral Reef Guardian)</h4>
+                    <h4>
+                      <a
+                        href="https://drive.google.com/file/d/1H-RtOIJx3Ps6v56726bxUFrSXgBVnASx/view?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Achievement Appreciation (Coral Reef Guardian)
+                      </a>
+                    </h4>
                     <p>Recognized for outstanding contribution to a community environmental program (TekTukBum Vol.01, BEM FTUI – June 2026), involving 100+ participants.</p>
                   </div>
                 </article>
